@@ -5,23 +5,6 @@ var u, v, dx, dt, count;
 var h, s, l;
 var initialPosition;
 
-var CustomSphere = function(){
-    this.geometry = new THREE.SphereGeometry(2, 16*16, 16*16);
-    this.material = new THREE.MeshPhongMaterial({
-        //color: 0xff6347, 
-        color: 0xffffff, side: THREE.DoubleSide, 
-        //ambient: 0xafeeee, 
-        ambient: 0xffffff,
-        //shininess: 250,
-        shininess: 300,
-        //specular: 0x080808,
-        specular: 0xffffff,
-        transparent: true, opacity: 0.1});
-    this.mesh = new THREE.Mesh(this.geometry, this.material);
-    
-    return this.mesh;
-}
-
 window.addEventListener("load", function(){
     init();
     animate();
